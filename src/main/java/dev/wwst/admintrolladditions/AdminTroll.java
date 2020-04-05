@@ -9,6 +9,8 @@ import dev.wwst.admintrolladditions.modules.LagMoveModule;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.concurrent.Callable;
+
 public final class AdminTroll extends JavaPlugin {
 
     private static AdminTroll INSTANCE;
@@ -32,7 +34,13 @@ public final class AdminTroll extends JavaPlugin {
         ml.registerModule(new DropItemModule());
         ml.registerModule(new LagMoveModule());
 
-        new Metrics(this, 6979);
+        Metrics metrics = new Metrics(this, 6979);
+        metrics.addCustomChart(new Metrics.SimplePie("admintools_version", new Callable<String>() {
+            @Override
+            public String call() throws Exception {
+                return Bukkit.getPluginManager().getPlugin("Admintools3").getDescription().getVersion();
+            }
+        }));
 
         getLogger().info("AdminTool3-TrollAddition was loaded and is now working.");
         getLogger().info("Suggest new trolls, report bugs and ask questions about AdminTrolls in our discord: https://discord.gg/YDkQbE7");
