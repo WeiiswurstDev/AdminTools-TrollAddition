@@ -1,0 +1,31 @@
+### This is the message file for AdminTrollAdditions.
+### You can change any settings in here.
+### Unlike AdminTools3, things that you write in here will NOT get overwritten.
+### Because AdminTrolls uses the same MessageTranslator as AdminTools3, PlaceholderAPI and all other features will work fine here as well.
+###
+### How to configure: https://github.com/WeiiswurstDev/AdminTools3/wiki/Configuring-AdminTools3
+### (although this guides you through the AdminTools3-config as well, everything said about modules in there is true.)
+### (Only one thing is different: This file will NOT get replaced on startup! you can change it however you like!)
+
+module:
+  hotbarswap:
+    item:
+      name: "&cHotbarSwapTroll"
+      lore: "&7The player will select##&7another item in his hotbar##&7every 8 seconds."
+    message:
+      toggleOn: "&cYou made &e%s &cswap his hotbar item every 8 seconds!"
+      toggleOff: "&cThe player &e%s &cwon't get his items swapped anymore."
+  dropitem:
+    item:
+      name: "&bSlippery Hands"
+      lore: "&7The player will drop##&7the item he holds##&7every 8 seconds!"
+    message:
+      toggleOn: "&e%s &cgot slippery hands now!"
+      toggleOff: "&e%s &ccan now hold his items again"
+  lagmove:
+    item:
+      name: "&cLagMove"
+      lore: "&7The player will##&7randomly stop moving!"
+    message:
+      toggleOn: "&e%s &cwill have 'fun' moving now!"
+      toggleOff: "&e%s &ccan move normally again."

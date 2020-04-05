@@ -1,0 +1,8 @@
+name: AdminTrollAddition
+version: @version@
+main: dev.wwst.admintrolladditions.AdminTroll
+api-version: 1.13
+softdepend: [Admintools3]
+authors: [Weiiswurst]
+description: Expansion for AdminTools3 with trolls
+website: ks1.xyz
